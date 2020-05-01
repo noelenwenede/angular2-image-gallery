@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib": "ng build --prod angular2-image-gallery && cp misc/convert.js dist/angular2-image-gallery/ && cp README.md dist/angular2-image-gallery/"
+    "lib": "ng build --prod angular2-image-gallery && cp misc/convert.js dist/angular2-image-gallery/ && cp README.md dist/angular2-image-gallery/",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +32,8 @@
     "ng5-slider": "^1.2.4",
     "onecolor": "^3.1.0",
     "rxjs": "^6.5.2",
-    "zone.js": "^0.9.1"
+    "zone.js": "^0.9.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@angular-devkit/build-ng-packagr": "~0.801.1",
@@ -57,5 +60,6 @@
     "tslint": "~5.18.0",
     "typescript": "~3.4.0",
     "webpack-dev-server": "^3.7.2"
-  }
+  },
+  "snyk": true
 }
